@@ -14,6 +14,7 @@ const Banner = () => {
                     <div className="py-3 text-center lg:text-start">
                         <h1 className='text-6xl lg:text-80xl font-bold text-darkpurple'>
                             Fix Anything<br /> with the <br/> experts
+                            
                         </h1>
                     </div>
                     <div className='my-7 text-center lg:text-start'>
@@ -25,8 +26,8 @@ const Banner = () => {
 
                 {/* COLUMN-2 */}
 
-                <div className='lg:-m-24 lg:pt-20 hidden lg:block ' style={{maxHeight:'92vh'}}>
-                    <Image className="object-cover" src="/images/banner/banner.jpg" alt="hero-image" width={800} height={642} />
+                <div className='lg:-m-24 lg:pt-20 hidden lg:block '>
+                    <Image className="object-cover" src="/images/banner/banner.jpg"  style={{maxHeight:'92vh'}} alt="hero-image" width={800} height={642} />
                 </div>
 
             </div>

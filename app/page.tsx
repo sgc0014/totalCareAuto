@@ -20,7 +20,7 @@ export default function Home() {
       <Banner />
       {/* <Aboutus /> */}
       {/* <Dedicated /> */}
-      {/* <Digital /> */}
+      <Digital />
       {/* <Beliefs /> */}
       {/* <Wework /> */}
       {/* <Ourteam /> */}
@@ -29,8 +29,8 @@ export default function Home() {
       <FAQ />
       <Testimonials />
       {/* <Articles /> */}
-      <Joinus />
-      <Insta />
+      {/* <Joinus /> */}
+      {/* <Insta /> */}
     </main>
   )
 }

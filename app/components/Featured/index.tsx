@@ -12,62 +12,33 @@ interface DataType {
 
 const postData: DataType[] = [
     {
-        heading: 'Brand design for a computer brand.',
+        heading: 'Servicing',
         imgSrc: '/images/featured/feat1.jpg',
     },
     {
-        heading: 'Mobile app 3d wallpaper.',
+        heading: 'Repairs',
         imgSrc: '/images/featured/feat2.jpg',
     },
     {
-        heading: 'Brand design for a computer brand.',
-        imgSrc: '/images/featured/feat1.jpg',
+        heading: 'Registration',
+        imgSrc: '/images/featured/feat3.jpg',
     },
-    {
-        heading: 'Mobile app 3d wallpaper.',
-        imgSrc: '/images/featured/feat2.jpg',
-    }
+    
 ]
 
 // CAROUSEL SETTINGS
 
-function SampleNextArrow(props: { className: any; style: any; onClick: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center" , background: "rgba(255, 255, 255, 0.3)", padding: "28px", borderRadius: "20px" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props: { className: any; style: any; onClick: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center" , background: "rgba(255, 255, 255, 0.3)", padding: "28px", borderRadius: "20px" }}
-            onClick={onClick}
-        />
-    );
-}
 
 
 export default class MultipleItems extends Component {
 
     render() {
         const settings = {
-            dots: false,
             infinite: true,
             slidesToShow: 2,
             // centerMode: true,
             slidesToScroll: 1,
-            arrows: true,
-            autoplay: false,
             speed: 500,
-            nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
-            prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
             cssEase: "linear",
             responsive: [
                 {
@@ -76,7 +47,6 @@ export default class MultipleItems extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
                     }
                 }
             ]
@@ -84,7 +54,8 @@ export default class MultipleItems extends Component {
 
 
         return (
-            <div className="bg-bgblue py-20 marginFeature bg-featured">
+            <div id="services-section" className="bg-bgblue py-20 marginFeature bg-featured">
+
                 <div className='mx-auto max-w-7xl sm:py-4 lg:px-8 '>
 
                     <div className="text-center pt-48 pb-10 ">
