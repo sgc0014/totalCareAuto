@@ -20,11 +20,12 @@ export default function Home() {
       <Banner />
       {/* <Aboutus /> */}
       {/* <Dedicated /> */}
-      <Digital />
       {/* <Beliefs /> */}
       {/* <Wework /> */}
       {/* <Ourteam /> */}
       <Featured />
+      <Digital />
+
       {/* <Manage /> */}
       <FAQ />
       <Testimonials />
