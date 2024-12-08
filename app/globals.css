@@ -11,6 +11,7 @@
 body {
   margin: 0;
   font-family: 'Urbanist', sans-serif;
+  background: #f5f7fa;
 }
 
 html:not([data-scroll="0"]) .navbar {
@@ -23,7 +24,7 @@ html:not([data-scroll="0"]) .navbar {
   transition: 0.4s linear;
   padding: 0px !important;
   /* height: 20px; */
-  z-index: 3;
+  z-index: 30;
 }
 
 html:not([data-scroll="0"]) .navbar>div>div {
@@ -138,7 +139,7 @@ html {
 }
 
 .marginFeature {
-  margin-top: 182px;
+  margin-top: 82px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -170,9 +171,10 @@ html {
 }
 
 .bg-featured {
-  background-image: url('/images/wework/vector.svg');
+  background-image: url('/images/featured/track.png');
   background-repeat: no-repeat;
-  background-position: 100% 35%;
+  background-position: left bottom 0px;
+  background-size:50% auto;
 }
 
 .feature-margin {

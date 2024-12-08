@@ -41,7 +41,8 @@ module.exports = {
       'bggrey' : '#DDDDDD',
       'footer' : 'rgba(226, 223, 223, 0.75)',
       'linegrey' : "#C4C4C4",
-      "textgrey":'#767676'
+      "textgrey":'#767676',
+      "subtitle":'#666',
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

@@ -25,30 +25,44 @@ const postData: DataType[] = [
   },
 ];
 
-
 // CAROUSEL SETTINGS
-function SampleNextArrow(props: { className: any; style: any; onClick: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center" , background: "rgba(255, 255, 255, 0.3)", padding: "28px", borderRadius: "20px" }}
-            onClick={onClick}
-        />
-    );
+function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "rgba(255, 255, 255, 0.3)",
+        padding: "28px",
+        borderRadius: "20px",
+      }}
+      onClick={onClick}
+    />
+  );
 }
 
-function SamplePrevArrow(props: { className: any; style: any; onClick: any; }) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "flex", justifyContent: "center", alignItems: "center" , background: "rgba(255, 255, 255, 0.3)", padding: "28px", borderRadius: "20px" }}
-            onClick={onClick}
-        />
-    );
+function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "rgba(255, 255, 255, 0.3)",
+        padding: "28px",
+        borderRadius: "20px",
+      }}
+      onClick={onClick}
+    />
+  );
 }
-
 
 export default class MultipleItems extends Component {
   render() {
@@ -59,12 +73,24 @@ export default class MultipleItems extends Component {
       slidesToScroll: 1,
       speed: 500,
       cssEase: "linear",
-      pauseOnHover:false,
+      pauseOnHover: false,
       autoplay: true,
-      arrows:true,
-      nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined} />,
-      prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined} />,
-   
+      arrows: true,
+      nextArrow: (
+        <SampleNextArrow
+          className={undefined}
+          style={undefined}
+          onClick={undefined}
+        />
+      ),
+      prevArrow: (
+        <SamplePrevArrow
+          className={undefined}
+          style={undefined}
+          onClick={undefined}
+        />
+      ),
+
       responsive: [
         {
           breakpoint: 800,
@@ -78,48 +104,48 @@ export default class MultipleItems extends Component {
     };
 
     return (
-      <div
-        id="services-section"
-        className="bg-bgblue py-20 marginFeature bg-featured"
-      >
+      <div id="services-section" className=" marginFeature">
         <div className="mx-auto max-w-7xl sm:py-4 lg:px-8 ">
-          <div className="text-center pt-48 pb-10 ">
-            <h3 className="text-4xl sm:text-6xl font-bold text-white my-2">
+          <div className="text-center pb-10 ">
+            <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">
               Our Services
             </h3>
-            {/* <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-50 lg:mr-48 my-2">Featured works.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-white text-opacity-25 lg:-mr-32 my-2">Featured works.</h3> */}
+            <div className="max-w-3xl mx-auto py-5 text-subtitle text-base ">
+              <p>
+                For your car we will do everything – advice, repairs and
+                maintenance. We are the preferred choice by many car owners
+                because our experience and knowledge is self-evident.
+              </p>
+            </div>
           </div>
-
-          <Slider {...settings}>
-            {postData.map((items, i) => (
-              <div key={i}>
-                <div key={i} className="relative">
-                  <div className="bg-white test-sha m-3 my-20 rounded-3xl">
-                    <div className="bg-transparent  pb-12 my-10 rounded-3xl">
-                      <Image
-                        src={items.imgSrc}
-                        alt="gaby"
-                        width={636}
-                        height={620}
-                        className="rounded-tr-3xl rounded-tl-3xl"
-                      />
-                      <div className="px-4">
-                      <div className="w-345">
-                        <h5 className="sm:text-3xl font-bold sm:pt-6 text-center sm:text-start  text-black">
-                          {items.heading}
-                        </h5>
-                        <p className="py-2 text-textgrey">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
-                        </p>
-                      </div>
-                      </div>
-                    </div>
+          <div className="relative">
+            <Slider {...settings}>
+              {postData.map((items, i) => (
+                <div
+                  key={i}
+                  className="max-w-lg bg-white rounded-lg overflow-hidden mx-auto"
+                >
+                  <img
+                    src={items?.imgSrc}
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold text-black-300 text-center">
+                      {items?.heading}
+                    </h2>
+                    <p className="text-grey font-medium text-center mt-4">
+                      Total Care Auto is your go-to destination for all your car
+                      repair needs. From engine repairs to brakes and clutch
+                      repair, we offer it all. Our proficient mechanics fix any
+                      issue with your vehicle. And they will go the extra mile
+                      with safety and service checks giving you total peace of
+                      mind.
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     );
