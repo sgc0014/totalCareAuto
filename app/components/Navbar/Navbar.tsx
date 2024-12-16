@@ -36,7 +36,7 @@ const Navbar = () => {
 
                             {/* LOGO */}
 
-                            <div className="flex flex-shrink-0 items-center border-right">
+                            <div className="flex flex-shrink-0 items-center ">
                                 <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
                                     Total Care Auto
                                 </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
                             {/* LINKS */}
 
-                            <div className="hidden lg:flex items-center border-right ">
+                            <div className="hidden lg:flex items-center  ">
                                 <div className="flex justify-end space-x-4">
                                     {navigation.map((item) => (
                                         <Link

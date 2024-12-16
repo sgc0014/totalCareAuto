@@ -70,7 +70,7 @@ const Contactusform = ({altButton,altActiveButton}: {altButton?: boolean; altAct
           : (
             <button
               type="button"
-              className="justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-gold "
+              className="justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-gold hover:text-white  transition duration-700"
               onClick={openModal}
             >
               Contact Us

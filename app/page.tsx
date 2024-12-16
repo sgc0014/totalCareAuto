@@ -1,4 +1,5 @@
 import Banner from './components/Banner/index';
+import Stats from './components/Stats/index';
 import Aboutus from './components/Aboutus/index';
 import Dedicated from './components/Dedicated/index';
 import Digital from './components/Digital/index';
@@ -18,13 +19,14 @@ export default function Home() {
   return (
     <main>
       <Banner />
+      <Stats />
       {/* <Aboutus /> */}
       {/* <Dedicated /> */}
       {/* <Beliefs /> */}
       {/* <Wework /> */}
       {/* <Ourteam /> */}
       <Featured />
-      <Digital />
+      {/* <Digital /> */}
 
       {/* <Manage /> */}
       <FAQ />

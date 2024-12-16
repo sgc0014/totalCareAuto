@@ -43,7 +43,8 @@ module.exports = {
       'linegrey' : "#C4C4C4",
       "textgrey":'#767676',
       "subtitle":'#666',
-    },
+      "footer":'#101827'
+        },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],

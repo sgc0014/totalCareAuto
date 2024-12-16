@@ -19,7 +19,7 @@ const FAQ = () => {
                                             } h-5 w-5 text-purple-500`}
                                     />
                                 </Disclosure.Button>
-                                <Disclosure.Panel className="px-4 pt-4 pb-2 text-base text-black font-normal opacity-50">
+                                <Disclosure.Panel className="px-4 pt-4 pb-2 text-base text-black font-normal opacity-50 transition duration-700">
                                     Craven omni memoria patriae zombieland clairvius narcisse <br /> religionis
                                     sunt diri undead historiarum. Golums, zombies unrelenting <br /> et Raimi fascinati beheading.
                                 </Disclosure.Panel>

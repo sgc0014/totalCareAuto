@@ -33,53 +33,14 @@ const products: ProductType[] = [
 
 const footer = () => {
   return (
-    <div className="bg-black -mt-40" id="first-section">
+    <div className="bg-footer -mt-40" id="first-section">
       <div className="mx-auto max-w-2xl pt-8 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="mt-24 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
           {/* COLUMN-1 */}
 
-          <div className="col-span-4">
-            <h3 className="text-white text-4xl font-semibold leading-9 mb-4 lg:mb-20">
-              {" "}
-              Total Care Auto
-            </h3>
-            <div className="flex gap-4">
-              <div className="footer-icons">
-                <Link href="https://facebook.com">
-                  <Image
-                    src={"/images/footer/vec.svg"}
-                    alt="facebook"
-                    width={15}
-                    height={20}
-                  />
-                </Link>
-              </div>
-              <div className="footer-icons">
-                <Link href="https://twitter.com">
-                  <Image
-                    src={"/images/footer/twitter.svg"}
-                    alt="twitter"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </div>
-              <div className="footer-icons">
-                <Link href="https://instagram.com">
-                  <Image
-                    src={"/images/footer/instagram.svg"}
-                    alt="instagram"
-                    width={20}
-                    height={20}
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-
           {/* CLOUMN-2/3 */}
 
-          <div className="group relative col-span-4">
+          <div className="group relative col-span-6">
             <ul>
               <li className="mb-5">
                 <div className="">
@@ -109,7 +70,11 @@ const footer = () => {
                   </div>
                 </div>
               </li>
+            
             </ul>
+          </div>
+          <div className="col-span-6">
+            <MapEmbed />
           </div>
         </div>
       </div>
@@ -125,10 +90,64 @@ const footer = () => {
                 <Link href="/#"> Total Care Auto</Link>
               </h3>
             </div>
-            <div className="flex justify-center md:justify-end"></div>
+            <div className="flex justify-center md:justify-end">
+            <div className="flex mt-2 gap-4">
+                  <div className="footer-icons">
+                    <Link href="https://facebook.com">
+                      <Image
+                        src={"/images/footer/vec.svg"}
+                        alt="facebook"
+                        width={15}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                  <div className="footer-icons">
+                    <Link href="https://twitter.com">
+                      <Image
+                        src={"/images/footer/twitter.svg"}
+                        alt="twitter"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                  <div className="footer-icons">
+                    <Link href="https://instagram.com">
+                      <Image
+                        src={"/images/footer/instagram.svg"}
+                        alt="instagram"
+                        width={20}
+                        height={20}
+                      />
+                    </Link>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const MapEmbed = () => {
+  const latitude = "-33.929825576909685"; // Replace with your latitude
+  const longitude = "150.88729743236263"; // Replace with your longitude
+  const zoomLevel = 19; // Adjust the zoom level (1-21)
+  const embedUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=${zoomLevel}&output=embed`;
+
+  return (
+    <div style={{ width: "100%", height: "400px" }}>
+      <iframe
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        style={{ border: 0 }}
+        src={embedUrl}
+        allowFullScreen
+        aria-hidden="false"
+      ></iframe>
     </div>
   );
 };

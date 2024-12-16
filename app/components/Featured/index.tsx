@@ -23,6 +23,10 @@ const postData: DataType[] = [
     heading: "Registration",
     imgSrc: "/images/featured/feat3.jpg",
   },
+  {
+    heading: "Electrical",
+    imgSrc: "/images/featured/feat4.jpg",
+  },
 ];
 
 // CAROUSEL SETTINGS
@@ -36,7 +40,7 @@ function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "rgba(255, 255, 255, 0.3)",
+        background: "rgb(131 131 131)",
         padding: "28px",
         borderRadius: "20px",
       }}
@@ -55,7 +59,7 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "rgba(255, 255, 255, 0.3)",
+        background: "rgb(131 131 131)",
         padding: "28px",
         borderRadius: "20px",
       }}
@@ -74,7 +78,6 @@ export default class MultipleItems extends Component {
       speed: 500,
       cssEase: "linear",
       pauseOnHover: false,
-      autoplay: true,
       arrows: true,
       nextArrow: (
         <SampleNextArrow
@@ -118,13 +121,14 @@ export default class MultipleItems extends Component {
               </p>
             </div>
           </div>
-          <div className="relative">
-            <Slider {...settings}>
+          {/*Dynamic tailwind grid */}
+
+          <div className="relative grid grid-cols-1 lg:grid-cols-2  gap-6">
+              
               {postData.map((items, i) => (
-                <div
-                  key={i}
-                  className="max-w-lg bg-white rounded-lg overflow-hidden mx-auto"
-                >
+                 <div key={i} className="relative">
+                 <div className='bg-white test-sha p-4 my-4 rounded-3xl hover:shadow-2xl'>
+
                   <img
                     src={items?.imgSrc}
                     className="w-full h-80 object-cover"
@@ -133,7 +137,7 @@ export default class MultipleItems extends Component {
                     <h2 className="text-2xl font-bold text-black-300 text-center">
                       {items?.heading}
                     </h2>
-                    <p className="text-grey font-medium text-center mt-4">
+                    <p className="text-textgrey font-medium text-center mt-4 leading-7 text-justify">
                       Total Care Auto is your go-to destination for all your car
                       repair needs. From engine repairs to brakes and clutch
                       repair, we offer it all. Our proficient mechanics fix any
@@ -143,8 +147,8 @@ export default class MultipleItems extends Component {
                     </p>
                   </div>
                 </div>
+                </div>
               ))}
-            </Slider>
           </div>
         </div>
       </div>

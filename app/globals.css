@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   background: #f5f7fa;
 }
 
@@ -120,10 +120,6 @@ html {
 }
 
 .bg-digital {
-  background-image: url("/images/featured/track2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 83% 15% ;
 }
 
 .bg-build {
